@@ -1,0 +1,19 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /dc
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/
+      subffix: .jsp
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3308/db_xmdc?serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: 123456

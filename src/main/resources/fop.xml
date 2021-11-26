@@ -1,0 +1,68 @@
+<fop version="1.0">
+
+  <!-- Strict user configuration -->
+  <strict-configuration>true</strict-configuration>
+
+  <!-- Strict FO validation -->
+  <strict-validation>true</strict-validation>
+
+  <!-- Base URL for resolving relative URLs -->
+  <base>./</base>
+
+  <!-- Font Base URL for resolving relative font URLs -->
+  <font-base>./</font-base>
+
+  <!-- Source resolution in dpi (dots/pixels per inch) for determining the size of pixels in SVG and bitmap images, default: 72dpi -->
+  <source-resolution>72</source-resolution>
+  <!-- Target resolution in dpi (dots/pixels per inch) for specifying the target resolution for generated bitmaps, default: 72dpi -->
+  <target-resolution>72</target-resolution>
+
+  <!-- default page-height and page-width, in case
+       value is specified as auto -->
+  <default-page-settings height="11in" width="8.26in"/>
+
+  <!-- Use file name nl_Bel instead of the default nl_BE -->
+  <hyphenation-pattern lang="nl" country="BE">nl_Bel</hyphenation-pattern>
+  <!-- or for xml file -->
+  <hyphenation-pattern lang="fr" extension="xml">lang/fr.xml</hyphenation-pattern>
+  <!-- or for binary file -->
+  <hyphenation-pattern lang="fr" extension="hyp">lang/fr.hyp</hyphenation-pattern>
+
+  
+  
+  
+  
+  
+  
+  
+  
+   <renderers>
+    <renderer mime="application/pdf">
+      <filterList>
+        <!-- provides compression using zlib flate (default is on) -->
+        <value>flate</value>
+      </filterList>
+      <fonts>
+           <font kerning="yes"  metrics-url="fonts/FZSongS.xml"   embed-url="fonts/FZSongS.TTF">
+               <font-triplet name="FZSongS" style="normal" weight="normal" />       
+               <font-triplet name="FZSongS" style="normal" weight="bold" />       
+               <font-triplet name="FZSongS" style="italic" weight="normal"/>       
+               <font-triplet name="FZSongS" style="italic" weight="bold" />
+           </font>
+
+          <font kerning="yes"  metrics-url="fonts/FZSongS(SIP).xml"   embed-url="fonts/FZSongS(SIP).TTF">
+              <font-triplet name="FZSongS(SIP)" style="normal" weight="normal" />
+              <font-triplet name="FZSongS(SIP)" style="normal" weight="bold" />
+              <font-triplet name="FZSongS(SIP)" style="italic" weight="normal"/>
+              <font-triplet name="FZSongS(SIP)" style="italic" weight="bold" />
+          </font>
+          <directory recursive="true">/fonts/</directory>
+       </fonts>
+      <!-- This option lets you specify additional options on an XML handler -->
+      <!--xml-handler namespace="http://www.w3.org/2000/svg">
+        <stroke-text>false</stroke-text>
+      </xml-handler-->
+    </renderer>
+	</renderers>
+  <!-- etc. etc..... -->
+</fop>

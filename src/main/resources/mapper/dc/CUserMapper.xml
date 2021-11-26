@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xm.dc.mapper.CUserMapper">
+    <resultMap id="BaseResultMap" type="com.xm.dc.entity.CUser">
+        <id column="usesrid" jdbcType="BIGINT" property="usesrid" />
+        <result column="username" jdbcType="VARCHAR" property="username" />
+        <result column="userpwd" jdbcType="VARCHAR" property="userpwd" />
+        <result column="phone" jdbcType="VARCHAR" property="phone" />
+        <result column="age" jdbcType="INTEGER" property="age" />
+        <result column="role" jdbcType="INTEGER" property="role" />
+    </resultMap>
+    <sql id="Base_Column_List">
+        usesrid, username, userpwd, phone,age,role,
+    </sql>
+
+    <select id="selectall"  resultMap="BaseResultMap">
+        select * from c_user
+    </select>
+</mapper>
