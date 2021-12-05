@@ -66,7 +66,9 @@
 						</fo:table-cell>
 						<fo:table-cell text-align="start">
 							<fo:block>
-								<xsl:value-of select="PartyA"/>
+								<fo:inline font-family="serif" font-weight="bold">
+									<xsl:value-of select="PartyA"/>
+								</fo:inline>
 							</fo:block>
 						</fo:table-cell>
 					</fo:table-row>

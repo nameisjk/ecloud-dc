@@ -43,6 +43,9 @@
         <value>flate</value>
       </filterList>
       <fonts>
+          <font metrics-url="fonts/WipoUniBold.xml" embed-url="fonts/WipoUniBold.ttf" kerning="yes">
+              <font-triplet name="serif" style="normal" weight="bold"/>
+          </font>
            <font kerning="yes"  metrics-url="fonts/FZSongS.xml"   embed-url="fonts/FZSongS.TTF">
                <font-triplet name="FZSongS" style="normal" weight="normal" />       
                <font-triplet name="FZSongS" style="normal" weight="bold" />       
