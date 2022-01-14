@@ -7,13 +7,26 @@ server:
       force: true
       enabled: true
 
+mybatis-plus:
+  #指定UserMapper.xml文件的位置
+  type-aliases-package: com.**.entity
+  mapper-locations: classpath:/mapper/dc/*.xml
+  #开启驼峰映射
+  configuration:
+    map-underscore-to-camel-case: true
+
 spring:
-  mvc:
-    view:
-      prefix: /WEB-INF/
-      subffix: .jsp
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3308/db_xmdc?serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
     username: root
     password: 123456
+
+########## log ##########
+logging:
+  level:
+    root: INFO
+    com.xm.dc: debug
+  pattern:
+    #console: '%d{yyyy-MM-dd HH:mm:ss} %-5level %C.%M[%line] - %msg%n'
+    #时间；日志级别；类；方法；行(行不能使用圆括号)
