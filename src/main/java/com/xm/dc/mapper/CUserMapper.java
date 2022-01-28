@@ -2,6 +2,7 @@ package com.xm.dc.mapper;
 
 import com.xm.dc.entity.CUser;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 

@@ -2,6 +2,7 @@ package com.xm.dc.controller;
 
 
 import com.xm.dc.entity.CUser;
+import com.xm.dc.entity.Response;
 import com.xm.dc.service.ICUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,12 +39,12 @@ public class CUserController {
 
     @RequestMapping("/aj.do")
     @ResponseBody // spring mvc返回ajax json格式数据的注解
-    public List<CUser> aj() {
+    public Response aj() {
         // http://localhost:8089/ssmptt/ajax.do
         // CUser search = new CUser();
-
+        Response result=new Response();
         List<CUser> list=  icUserService.selectall();
-
-        return list;
+        result.setData(list);
+        return result;
     }
 }
